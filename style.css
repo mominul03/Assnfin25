@@ -104,3 +104,59 @@ body {
     height: 22px;
   }
 }
+
+
+
+/* Hero Section */
+.hero {
+    /* Background gradient */
+  background: linear-gradient(to right, #013223, #006747, #013223); 
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-logo img { /*Logo */
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-slogan { /*Slogan */
+  font-size: 16px;
+  color: white;
+  white-space: nowrap;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero-logo img {
+    width: 60px;
+  }
+
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-slogan {
+    white-space: normal;    
+    overflow: visible;     
+    text-overflow: unset;   
+    font-size: 14px;        
+    line-height: 1.4;       
+  }
+}
+
+
+
