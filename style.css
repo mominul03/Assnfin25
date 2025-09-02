@@ -316,6 +316,101 @@ body {
 
 
 
+/* History Section */
+.history {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  height: fit-content;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.history-header h3 {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  gap: 6px;
+}
+
+.history-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Clear Button */
+.clear-btn {
+  background: #16a34a;       
+  color: #fff;
+  border: none;
+  border-radius: 20px;      
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;         
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clear-btn:hover {
+  background: #15803d;      
+}
+
+.history-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.history-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.history-number {
+  font-size: 13px;
+  color: #5c5c5c;
+  margin: 0;
+}
+
+.time {
+  font-size: 12px;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+  .history {
+    margin-top: 20px;
+  }
+}
+
+
+
+
 
 
 
