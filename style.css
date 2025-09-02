@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+
+body {
+  background: #f8fff9;
+  color: #1c1c1c;
+}
+
+
+
+/* Navbar Section */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+/* navbar left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-name {
+  font-weight: 700;
+  color: #065f46;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* navbar right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+.status-box {
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+  padding: 6px 14px; 
+  border-radius: 24px; 
+  font-size: 15px; 
+  font-weight: 600;
+  background: #ddffe5;
+}
+
+.status-icon {    /*Navbar icons*/
+  width: 20px; 
+  height: 20px; 
+}
+
+.copy-btn {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  padding: 8px 18px; 
+  border-radius: 24px; 
+  font-size: 15px; 
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; 
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px; 
+    flex-wrap: wrap;
+  }
+
+  .status-box,
+  .copy-btn {
+    padding: 8px 16px; 
+    font-size: 16px; 
+  }
+
+  .status-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
