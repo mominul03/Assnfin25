@@ -51,3 +51,15 @@ document.querySelectorAll('.call-btn').forEach(btn => {
     document.querySelector('.history-list').prepend(historyItem); // Add to top
   });
 });
+
+
+
+
+
+///Functionality for call history
+const clearBtn = document.querySelector('.clear-btn'); //clear button click
+clearBtn.addEventListener('click', () => {   // when clear button click 
+  const history = document.querySelector('.history-list'); // call history list selection
+  // clearing all history
+  history.innerHTML = ''; 
+});
