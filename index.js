@@ -63,3 +63,24 @@ clearBtn.addEventListener('click', () => {   // when clear button click
   // clearing all history
   history.innerHTML = ''; 
 });
+
+
+
+
+///Functionality for copy buttons
+const copyBtns = document.querySelectorAll('.copy-btn-outline'); // card copy buttons
+const navCopy = document.querySelector('.copy-btn');             // navbar copy count
+let copyCount = parseInt(navCopy.textContent) || 0;             // initially the copy count
+
+copyBtns.forEach(btn => {
+  btn.addEventListener('click', () => {                         //when copy button is clicked
+    const copyNum = btn.closest('.card').querySelector('.card-number').textContent; // getting number
+
+    navigator.clipboard.writeText(copyNum);                      // copy number to clipboard
+    alert(`${copyNum} copied!`);                                  // show alerting message at top
+
+    copyCount++;                                                 // increment the count of copies
+    navCopy.textContent = `${copyCount} Copy`;                  // show updated copy count on navbar
+  });
+});
+
