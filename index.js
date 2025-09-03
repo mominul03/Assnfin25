@@ -43,8 +43,8 @@ document.querySelectorAll('.call-btn').forEach(btn => {
     // Call details with service name, service number, and current time of call
     historyItem.innerHTML = `               
       <div>
-        <p class="history-title">${name}</p>    
-        <p class="history-number">${number}</p>
+        <p class="history-title">${svname}</p>    
+        <p class="history-number">${svnumber}</p>
       </div>
       <span class="time">${new Date().toLocaleTimeString()}</span>
     `;
