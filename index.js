@@ -15,3 +15,39 @@ cards.addEventListener('click', (e) => { // Listen for clicks on cards
     btn.querySelector('.fav-icon').classList.toggle('liked');// Switch heart style
   }
 });
+
+
+
+///Functionality for call buttons
+
+document.querySelectorAll('.call-btn').forEach(btn => {
+  // Call button click
+
+  btn.addEventListener('click', () => { // When button is clicked
+    //Getting service card info,title and number
+    const card = btn.closest('.card'); 
+    const svname = card.querySelector('.card-title').textContent; 
+    const svnumber = card.querySelector('.card-number').textContent; 
+
+    const coinscount = document.querySelector('.navbar-right .status-box:nth-child(2) span'); // Navbar coin count
+    let coins = +coinscount.textContent; // Coins as numbers
+
+    if (coins < 20) return alert("Not enough coins!"); // Alerting for not enough coins
+
+    coinscount.textContent = coins - 20; // Deduct everytime a call is taken
+    alert(`Calling ${svname} at ${svnumber}`); //ALerting with call details
+
+    // New history entry of calls and added to the top
+    const historyItem = document.createElement('li'); // This is a new list item
+
+    // Call details with service name, service number, and current time of call
+    historyItem.innerHTML = `               
+      <div>
+        <p class="history-title">${name}</p>    
+        <p class="history-number">${number}</p>
+      </div>
+      <span class="time">${new Date().toLocaleTimeString()}</span>
+    `;
+    document.querySelector('.history-list').prepend(historyItem); // Add to top
+  });
+});
